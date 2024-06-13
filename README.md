@@ -1,28 +1,28 @@
-# AutoML Implementation on BERT Classifier
+# 🤖 AutoML Implementation on BERT Classifier
 
 ## Author: Debdeep Ghosal
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
-1. **Dataset Collection**
-2. **Data Preprocessing**
-3. **Initial Model Training**
-4. **Model Deployment on Sagemaker Endpoint**
-5. **Set up Model Inference API**
-6. **AutoML Implementation**
+1. **📂 Dataset Collection**
+2. **🧹 Data Preprocessing**
+3. **🧠 Initial Model Training**
+4. **🚀 Model Deployment on Sagemaker Endpoint**
+5. **🔌 Set up Model Inference API**
+6. **🤖 AutoML Implementation**
 
 ---
 
-### Dataset Collection
+### 📂 Dataset Collection
 
 - The dataset has been collected from [20 Newsgroups Dataset](http://qwone.com/~jason/20Newsgroups/).
 - It contains 18,846 documents across 20 newsgroups with multiple labels (e.g., baseball, comp, crypt, talk, religion, etc.).
 
 ---
 
-### Data Preprocessing
+### 🧹 Data Preprocessing
 
 - The dataset is loaded in the Kaggle environment.
 - The directory-structured dataset corresponding to the classes is inserted into a pandas DataFrame.
@@ -32,7 +32,7 @@
 
 ---
 
-### Initial Model Training
+### 🧠 Initial Model Training
 
 The initial model is trained on a free Kaggle GPU. The following steps are involved:
 
@@ -46,7 +46,7 @@ The initial model is trained on a free Kaggle GPU. The following steps are invol
 
 ---
 
-### Model Deployment on Sagemaker Endpoint
+### 🚀 Model Deployment on Sagemaker Endpoint
 
 1. Create a Sagemaker notebook instance; upload the trained model weights to an S3 bucket.
 2. Create an inference script defining:
@@ -59,14 +59,14 @@ The initial model is trained on a free Kaggle GPU. The following steps are invol
 
 ---
 
-### Set up Model Inference API
+### 🔌 Set up Model Inference API
 
 1. Create a Lambda function with permissions to invoke a Sagemaker endpoint and get predictions.
 2. Attach the Lambda function to an API Gateway to receive data in JSON format and respond with predictions.
 
 ---
 
-### AutoML Implementation
+### 🤖 AutoML Implementation
 
 1. Create a Lambda function and attach it to an API Gateway.
 2. The API receives feedback data, which is:
@@ -77,7 +77,7 @@ The initial model is trained on a free Kaggle GPU. The following steps are invol
 
 ---
 
-## Future Scope and Improvements
+## 🚀 Future Scope and Improvements
 
 - Hyperparameter tuning (not implemented due to large compute requirements).
 - Using a secondary endpoint to ensure ~100% uptime.
@@ -85,7 +85,7 @@ The initial model is trained on a free Kaggle GPU. The following steps are invol
 
 ---
 
-## Author’s Note
+## 📌 Author’s Note
 
 - Each Lambda function requires specific policies attached to its role to interact with other AWS services (e.g., IAM, Sagemaker, S3).
 - The Lambda function associated with training the model also requires the training script (available in this GitHub repository).
@@ -96,5 +96,4 @@ The initial model is trained on a free Kaggle GPU. The following steps are invol
 Thank you for exploring this project! For any queries or contributions, feel free to reach out.
 
 ---
-
 
