@@ -1,0 +1,7 @@
+{
+  "source": ["aws.sagemaker"],
+  "detail-type": ["SageMaker Training Job State Change"],
+  "detail": {
+    "TrainingJobStatus": ["Completed"]
+  }
+}
